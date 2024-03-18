@@ -8,12 +8,3 @@ resource "aws_instance" "name" {
     Name = var.instance_names[count.index]
   }, var.common_tags)
 }
-
-# resource "aws_instance" "name1" {
-#   ami             = var.ami_id
-#   instance_type   = "t2.micro"
-#   security_groups = [aws_security_group.allow_all.name]
-#   tags = merge({
-#     Name = var.instance_names[1]
-#   }, var.common_tags)
-# }
