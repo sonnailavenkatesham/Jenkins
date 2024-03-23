@@ -2,7 +2,7 @@ pipeline{
     agent { node { label 'AGENT' } }
     // timeout{ time: 1, unit: 'minite'}
     stages{
-        stege("Build"){
+        stage("Build"){
             steps{
                 sh '''
                 ls -l
@@ -11,19 +11,19 @@ pipeline{
                 '''
             }
         }
-        stege("Test"){
-                steps{
-                    sh '''
-                    echo "Testing stage is success"
-                    '''
-                }
+        stage("Test"){
+            steps{
+                sh '''
+                echo "Testing stage is success"
+                '''
+            }
         }
-        stege("Deploy"){
-                steps{
-                    sh '''
-                    echo "Deploying stage is success"
-                    '''
-                }
+        stage("Deploy"){
+            steps{
+                sh '''
+                echo "Deploying stage is success"
+                '''
+            }
         }
     }
     post{
