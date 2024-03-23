@@ -1,6 +1,10 @@
 pipeline{
     agent { node { label 'AGENT' } }
     // timeout{ time: 1, unit: 'minite'}
+    parameters{
+        string( name: 'Name', description: "Enter your name")
+        choice( name: 'Environment', choice: ['Dev', 'PROD'], description: "Chose environment" )
+    }
     stages{
         stage("Build"){
             steps{
