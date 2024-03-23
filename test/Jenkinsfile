@@ -5,6 +5,8 @@ pipeline{
         stege("Build"){
             steps{
                 sh '''
+                ls -l
+                pwd
                 echo "Building stage is success"
                 '''
             }
