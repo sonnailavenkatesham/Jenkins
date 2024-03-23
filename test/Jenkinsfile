@@ -9,7 +9,7 @@ pipeline{
         stage("Build"){
             when {
                 expression{
-                    params.choice.environment == 'Dev'
+                    params.choice.Environment == 'Dev'
                 }
             }
             steps{
