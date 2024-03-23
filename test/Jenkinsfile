@@ -1,6 +1,6 @@
 pipeline{
     agent { node { label 'AGENT' } }
-    timeout{ time: 1, unit: 'minite'}
+    // timeout{ time: 1, unit: 'minite'}
     stages{
         stege("Build"){
             steps{
