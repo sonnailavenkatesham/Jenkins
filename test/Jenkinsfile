@@ -1,0 +1,32 @@
+pipeline{
+    agent { node { label 'AGENT' } }
+    timeout{ time: 1, unit: 'minite'}
+    stages{
+        stege("Build"){
+            steps{
+                sh '''
+                echo "Building stage is success"
+                '''
+            }
+        }
+        stege("Test"){
+                steps{
+                    sh '''
+                    echo "Testing stage is success"
+                    '''
+                }
+        }
+        stege("Deploy"){
+                steps{
+                    sh '''
+                    echo "Deploying stage is success"
+                    '''
+                }
+        }
+    }
+    post{
+        always{
+            echo 'I will always say Hello again!'
+        }
+    }
+}
