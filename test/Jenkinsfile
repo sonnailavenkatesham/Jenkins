@@ -28,6 +28,11 @@ pipeline{
             }
         }
         stage("Deploy"){
+            when {
+                expression{
+                    params.Environment == 'PROD'
+                }
+            }
             steps{
                 sh '''
                 echo "Deploying stage is success"
